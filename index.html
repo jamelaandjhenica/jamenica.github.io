@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jamenica Beauty — Natural Ingredients, Real Results</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap">
+
+<style>:root {
+	color-scheme: light;
+	--p: #7b55b0;
+	--p2: #9a7bc4;
+	--lav: #efe6f8;
+	--cream: #fbf6f2;
+	--ink: #17121f;
+	--card: #fff;
+	--mut: #5d5469;
+	--line: #e3d6f0;
+	box-sizing: border-box;
+	padding-top: env(safe-area-inset-top, 0px);
+	padding-bottom: env(safe-area-inset-bottom, 0px)
+}
+
+* {
+	box-sizing: border-box
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 70px
+}
+
+body {
+	margin: 0;
+	background: var(--cream);
+	color: var(--ink);
+	font-family: Poppins, system-ui, sans-serif;
+	line-height: 1.6
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Playfair Display', Georgia, serif;
+	margin: 0
+}
+
+img {
+	max-width: 100%;
+	display: block
+}
+
+.wrap {
+	max-width: 1100px;
+	margin: auto;
+	padding: 0 20px
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	background: var(--cream);
+	border-bottom: 1px solid var(--line);
+	backdrop-filter: blur(8px)
+}
+
+nav .wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 62px
+}
+
+.logo {
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	letter-spacing: .18em;
+	font-weight: 700
+}
+
+.logo span {
+	color: var(--p);
+	font-size: 11px;
+	letter-spacing: .4em;
+	display: block;
+	margin-top: -6px
+}
+
+nav ul {
+	display: flex;
+	gap: 22px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 14px
+}
+
+nav a {
+	color: inherit;
+	text-decoration: none
+}
+
+.btn {
+	background: var(--p);
+	color: #fff;
+	border: 0;
+	border-radius: 999px;
+	padding: 11px 24px;
+	font: 500 14px Poppins, sans-serif;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block
+}
+
+.btn:hover {
+	background: #6a45a0
+}
+
+.btn.alt {
+	background: var(--lav);
+	color: var(--p)
+}
+
+.hero {
+	background: var(--lav) url('tm-hero-bg.jpg') center/cover no-repeat;
+	overflow: hidden
+}
+
+.hero .wrap {
+	display: grid;
+	grid-template-columns: 1.1fr 1fr;
+	gap: 30px;
+	align-items: center;
+	padding-top: 40px
+}
+
+.tag {
+	letter-spacing: .3em;
+	font-size: 12px;
+	color: var(--p)
+}
+
+.hero h1 {
+	font-size: clamp(38px, 6vw, 64px);
+	line-height: 1.1;
+	margin: 10px 0 16px
+}
+
+.hero h1 em {
+	color: var(--p);
+	font-style: normal
+}
+
+.hero p {
+	color: var(--mut);
+	max-width: 440px
+}
+
+.hero .cta {
+	display: flex;
+	gap: 12px;
+	margin-top: 22px;
+	flex-wrap: wrap
+}
+
+.hero img {
+	border-radius: 240px 240px 0 0;
+	margin-left: auto;
+	width: 100%;
+	max-width: 440px
+}
+
+.badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 28px;
+	justify-content: center;
+	background: var(--p);
+	color: #fff;
+	padding: 16px 20px;
+	font-size: 14px
+}
+
+section {
+	padding: 70px 0
+}
+
+h2 {
+	font-size: clamp(28px, 4vw, 40px);
+	color: var(--p)
+}
+
+.sub {
+	color: var(--mut);
+	margin: 6px 0 34px
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	gap: 20px
+}
+
+.card {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 20px;
+	padding: 18px;
+	display: flex;
+	flex-direction: column
+}
+
+.card .im {
+	background: var(--lav);
+	border-radius: 14px;
+	height: 210px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 14px
+}
+
+.card .im img {
+	max-height: 100%;
+	object-fit: contain
+}
+
+.card .im img[alt='Sun Protection'],
+.card .im img[alt='Revitalizing Cream'],
+.card .im img[alt='Radiant Serum'],
+.card .im img[alt='Gentle Cleanser'] {
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+.card h3 {
+	font-size: 20px
+}
+
+.card p {
+	font-size: 13px;
+	color: var(--mut);
+	margin: 4px 0 12px;
+	flex: 1
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px
+}
+
+.price {
+	font-size: 22px;
+	font-weight: 600;
+	color: var(--p)
+}
+
+.about {
+	background: #fff url('tm-hero-bg.jpg') center/cover no-repeat;
+}
+
+#shop {
+	padding-bottom: 80px
+}
+
+.about .wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	align-items: center
+}
+
+.about img {
+	border-radius: 24px
+}
+
+.checks {
+	list-style: none;
+	padding: 0;
+	margin: 16px 0 0
+}
+
+.checks li:before {
+	content: "✓";
+	background: var(--p);
+	color: #fff;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	margin-right: 10px
+}
+
+.checks li {
+	margin: 8px 0
+}
+
+.contact {
+	background: var(--lav);
+	text-align: center
+}
+
+.lines {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px
+}
+
+.info .line {
+	background: var(--card);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	padding: 14px 18px;
+	margin: 0
+}
+
+.info a {
+	color: var(--p);
+	text-decoration: none;
+	font-weight: 500
+}
+
+.info a:hover {
+	text-decoration: underline
+}
+
+footer {
+	background: var(--p);
+	color: #fff;
+	text-align: center;
+	padding: 26px 20px;
+	font-size: 13px
+}
+
+@media(max-width:760px) {
+	nav ul {
+		display: none
+	}
+	.hero .wrap,
+	.about .wrap,
+	.lines {
+		grid-template-columns: 1fr
+	}
+	.hero img {
+		max-width: 300px;
+		margin: auto
+	}
+}
+
+</style>
+</head>
+
+<body>
+<nav>
+<div class="wrap">
+  <div class="logo">JAMENICA<span>BEAUTY</span></div>
+
+  <ul><li><a href="#shop">Shop</a></li><li><a href="#about">Why Us</a></li><li><a href="#contact">Contact</a></li></ul>
+  <button class="btn">Call Now +63 936 629 1297</button></div></nav>
+  <header class="hero">
+	<div class="wrap">
+	<div>
+		<div class="tag">
+			NATURAL INGREDIENTS · REAL RESULTS
+		</div>
+
+		<h1>Reveal <em>Your Natural</em> Radiance</h1>
+
+		<p>Skincare made with safe, effective ingredients for healthy, glowing skin.</p>
+
+		<div class="cta">
+			<a class="btn" href="#shop">Shop Now</a><a class="btn alt" href="#contact">Contact Us</a>
+		</div>
+	</div>
+	<img src="tm-hero.png">
+	</div>
+</header>
+
+<div class="badges">
+	<span>🌿 Natural Ingredients</span><span>🧪 Dermatologically Tested</span><span>♡ For All Skin Types</span><span>🐰 Cruelty Free</span>
+</div>
+
+<section id="shop">
+	<div class="wrap">
+		<h2>Our Products</h2>
+
+		<p class="sub">Simple Care. Visible Results.</p>
+
+		<div class="grid" id="products">
+			<div class="card">
+				<div class="im"><img src="cleanser.png" alt="Gentle Cleanser"></div>
+				<h3>Gentle Cleanser</h3>
+				<p>Brightening &amp; hydrating · 100 mL. Gently removes dirt, oil and makeup without drying.</p>
+				<div class="row"><span class="price">$18.00</span><button class="btn">Order</button></div>
+			</div>
+
+			<div class="card">
+				<div class="im"><img src="serum.png" alt="Radiant Serum"></div>
+				<h3>Radiant Serum</h3>
+				<p>Brightening &amp; revitalizing · 30 mL. Targets dark spots and uneven tone.</p>
+				<div class="row"><span class="price">$32.00</span><button class="btn">Order</button></div>
+			</div>
+
+			<div class="card">
+				<div class="im"><img src="cream.png" alt="Revitalizing Cream"></div>
+				<h3>Revitalizing Cream</h3>
+				<p>Nourishing &amp; firming · 50 g. Locks in moisture for soft, healthy skin.</p>
+				<div class="row"><span class="price">$28.00</span><button class="btn">Order</button></div>
+			</div>
+
+			<div class="card">
+				<div class="im"><img src="protection.jpg" alt="Sun Protection"></div>
+				<h3>Sun Protection</h3>
+				<p>Daily defense against harmful UV rays. Lightweight everyday SPF.</p>
+				<div class="row"><span class="price">$22.00</span><button class="btn">Order</button></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about" id="about">
+	<div class="wrap">
+		<img alt="Petalveil product range" src="why.png">
+
+		<div>
+			<h2>Why Choose Jamenica Beauty?</h2>
+
+			<p class="sub">Glow Naturally, Everyday.</p>
+
+			<ul class="checks">
+				<li>High-quality and effective formulations</li>
+
+				<li>Made with safe and natural ingredients</li>
+
+				<li>Gentle for everyday use</li>
+
+				<li>Helps you achieve healthy, radiant skin</li>
+			</ul>
+
+			<p style="margin-top:20px;font-family:'Playfair Display',serif;font-style:italic;color:#7b55b0;font-size:20px">Because healthy skin is always in. ♡</p>
+		</div>
+	</div>
+</section>
+
+<section class="contact" id="contact">
+	<div class="wrap">
+		<div class="info">
+			<h2>Contact Us</h2>
+			<p class="sub">Questions about our products? We'd love to hear from you.</p>
+			<div class="lines">
+			<p class="line"><b>Call now</b><br><a href="tel:+639366291297">+63 936 629 1297</a></p>
+			<p class="line"><b>Email us</b><br><a href="mailto:hello@jamenica.com">hello@jamenica.com</a></p>
+			<p class="line"><b>Location</b><br><a href="https://www.google.com/maps/search/?api=1&query=Tarlac+City+Tarlac+Philippines" rel="noopener" target="_blank">Tarlac City, Tarlac, Philippines</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	© 2026 Jamenica Beauty · Natural Ingredients, Real Results
+</footer>
+</body>
+</html>
